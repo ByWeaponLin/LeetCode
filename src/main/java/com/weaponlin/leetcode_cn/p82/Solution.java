@@ -10,7 +10,7 @@ public class Solution {
         }
         ListNode node = head;
 
-        
+
 
         while(node.next != null) {
             ListNode next = node.next;
