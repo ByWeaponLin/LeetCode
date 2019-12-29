@@ -4,34 +4,40 @@ import com.weaponlin.pojo.ListNode;
 import com.weaponlin.utils.ListNodeUtil;
 
 public class Solution {
+
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
+        if (head == null) {
+            return null;
         }
-        ListNode node = head;
-
-
-
-        while(node.next != null) {
-            ListNode next = node.next;
-            if (node.val == next.val) {
-                node.next = next.next;
+        // find head
+        while(head.next != null) {
+            if (head.val == head.next.val) {
+                head = head.next;
             } else {
-                node = next;
+                break;
             }
         }
+        return null;
+    }
 
-        return head;
+    public ListNode findHead(ListNode head) {
+        // TODO
+        return null;
     }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        ListNodeUtil.print(solution.deleteDuplicates(null));
-        ListNodeUtil.print(solution.deleteDuplicates(getNode0()));
-        ListNodeUtil.print(solution.deleteDuplicates(getNode1()));
-        ListNodeUtil.print(solution.deleteDuplicates(getNode2()));
-        ListNodeUtil.print(solution.deleteDuplicates(getNode3()));
-        ListNodeUtil.print(solution.deleteDuplicates(getNode4()));
+//        ListNodeUtil.print(solution.deleteDuplicates(null));
+//        ListNodeUtil.print(solution.deleteDuplicates(getNode0()));
+//        ListNodeUtil.print(solution.deleteDuplicates(getNode1()));
+//        ListNodeUtil.print(solution.deleteDuplicates(getNode2()));
+//        ListNodeUtil.print(solution.deleteDuplicates(getNode3()));
+//        ListNodeUtil.print(solution.deleteDuplicates(getNode4()));
+//        ListNodeUtil.print(solution.findHead(getNode0()));
+
+//        ListNodeUtil.print(solution.findHead(getNode2()));
+//        ListNodeUtil.print(solution.findHead(getNode3()));
+//        ListNodeUtil.print(solution.findHead(getNode4()));
 
     }
 
